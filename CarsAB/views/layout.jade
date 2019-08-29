@@ -1,0 +1,22 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+    script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js')
+  body
+    .layout-container
+      .row
+        .col-xs-4
+          img.logo(src='/images/icon.png')
+        .col-xs-4
+          .title CarsAB
+      .row
+        .col-xs-4
+          .menu-box
+            a.menu(href="/") Home
+            a.menu(href="/customers") List Customer
+            a.menu(href="/customers/add") Add Customer
+
+    block content

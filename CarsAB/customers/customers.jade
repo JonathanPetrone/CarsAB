@@ -1,0 +1,30 @@
+extends ../layout
+
+block content
+    h1= title
+    table.customers_table
+        tr
+            th First Name
+            th Last Name
+            th Email
+            th Phone
+            th City
+            th Street
+            th License Plate
+            th Delete
+        if customers_list && customers_list.length > 0
+            each customers in customers_list
+                tr
+                    td #{customers.first_name}
+                    td #{customers.last_name}
+                    td #{customers.email}
+                    td #{customers.phone}
+                    td #{customers.city}
+                    td #{customers.street}
+                    td #{customers.license_plate}
+                    td.center
+                        a(href="/customers/delete?id=#{customers.id}")
+                            img.icon(src="/images/delete.png")
+        else
+            tr
+                td(colspan=8) No records

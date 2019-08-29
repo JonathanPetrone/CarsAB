@@ -1,0 +1,30 @@
+extends ../layout
+
+block content
+    h1 Add Customer
+    form.user_input(action='/users', method='post')
+        label(for='first_name')
+            span First Name
+            input(type='text', name='first_name', id='first_name', required='true', value='Anna', )			
+            label(for='last_name')
+                span Last Name
+                input(type='text', name='last_name', id='last_name', required='true', value='Andersson')
+            label(for='email')
+                span Email
+                input(type='text', name='email', id='email', required='true', value='anna@gmail.com')
+            label(for='phone')
+                span Phone
+                input(type='text', name='phone', id='phone', required='true', value='+00 0000 0000' )
+            label(for='city')
+                span City
+                input(type='text', name='city', id='city', required='true', value='Stockholm')
+            label(for='street')
+                span Street
+                input(type='text', name='street', id='street', required='true', value='Kungsgatan 15')
+            label(for='license_plate')
+                span License Plate
+                input(type='text', name='license_plate', id='license_plate', required='true', value='ABC-123')
+
+        label.control-label(for='submit')
+            span
+            input(type='submit', id='submit', value='Save')
